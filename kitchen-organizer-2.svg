@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="koBg2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#koBg2)"/>
+
+  <text x="300" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20" fill="#0f172a" text-anchor="middle">PRECISION BALL-BEARING CORE</text>
+  <text x="300" y="80" font-family="sans-serif" font-weight="600" font-size="12" fill="#2563eb" text-anchor="middle">Non-Skid Diamond Grip Surface + Stainless Steel Glide System</text>
+
+  <!-- Top-Down View Diagram -->
+  <g transform="translate(150, 120)">
+    <!-- Outer Raised Rim -->
+    <circle cx="150" cy="150" r="140" fill="#0a192f"/>
+    <!-- Outer Track -->
+    <circle cx="150" cy="150" r="130" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- Textured TPR Mat -->
+    <circle cx="150" cy="150" r="120" fill="#f1f5f9"/>
+
+    <!-- Concentric Grip Rings -->
+    <circle cx="150" cy="150" r="100" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <circle cx="150" cy="150" r="80" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <circle cx="150" cy="150" r="60" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+    <!-- Center Bearing Hub (Cutaway Graphic) -->
+    <circle cx="150" cy="150" r="35" fill="#1e293b"/>
+    <!-- Stainless steel ball bearings around hub -->
+    <circle cx="150" cy="122" r="5" fill="#e2e8f0" stroke="#475569"/>
+    <circle cx="170" cy="130" r="5" fill="#e2e8f0" stroke="#475569"/>
+    <circle cx="178" cy="150" r="5" fill="#e2e8f0" stroke="#475569"/>
+    <circle cx="170" cy="170" r="5" fill="#e2e8f0" stroke="#475569"/>
+    <circle cx="150" cy="178" r="5" fill="#e2e8f0" stroke="#475569"/>
+    <circle cx="130" cy="170" r="5" fill="#e2e8f0" stroke="#475569"/>
+    <circle cx="122" cy="150" r="5" fill="#e2e8f0" stroke="#475569"/>
+    <circle cx="130" cy="130" r="5" fill="#e2e8f0" stroke="#475569"/>
+    <circle cx="150" cy="150" r="14" fill="#2563eb"/>
+    <text x="150" y="154" font-family="sans-serif" font-weight="900" font-size="8" fill="#ffffff" text-anchor="middle">CORE</text>
+  </g>
+
+  <!-- Spec details breakdown -->
+  <g transform="translate(80, 440)">
+    <rect x="0" y="0" width="440" height="100" rx="14" fill="#0f172a"/>
+    <text x="30" y="35" font-family="sans-serif" font-weight="800" font-size="14" fill="#f59e0b">Heavy-Duty Engineering Highlights:</text>
+    <text x="30" y="65" font-family="sans-serif" font-weight="600" font-size="12" fill="#e2e8f0">• Whisper-Quiet Rotation: Stainless steel ball bearings eliminate squeaking.</text>
+    <text x="30" y="85" font-family="sans-serif" font-weight="600" font-size="12" fill="#e2e8f0">• Non-Skid Base: Won't scratch glass shelves, polished granite or wood cabinets.</text>
+  </g>
+</svg>

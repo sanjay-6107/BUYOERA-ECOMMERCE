@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="wcBg3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#wcBg3)"/>
+
+  <text x="300" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20" fill="#0f172a" text-anchor="middle">AUTHENTIC 3M HIGH-BOND ADHESIVE</text>
+  <text x="300" y="80" font-family="sans-serif" font-weight="600" font-size="12" fill="#dc2626" text-anchor="middle">Rock-Solid Grip • Leaves Zero Sticky Residue When Removed</text>
+
+  <!-- Macro Peel & Stick Demonstration -->
+  <g transform="translate(150, 140)">
+    <!-- Silicone Body Back -->
+    <rect x="0" y="40" width="300" height="150" rx="20" fill="#0f172a"/>
+    <text x="150" y="125" font-family="sans-serif" font-weight="800" font-size="16" fill="#334155" text-anchor="middle">FLEXIBLE SILICONE BASE</text>
+
+    <!-- 3M Red Backing Layer Peeling off -->
+    <path d="M0 40 L220 40 Q250 80 280 20 L280 190 L0 190 Z" fill="#ef4444"/>
+    <text x="110" y="115" font-family="sans-serif" font-weight="900" font-size="28" fill="#ffffff">3M</text>
+    <text x="110" y="140" font-family="sans-serif" font-weight="800" font-size="11" fill="#fee2e2">VHB ADHESIVE FILM</text>
+
+    <!-- Peeling Corner Effect -->
+    <polygon points="220,40 300,100 240,110" fill="#b91c1c"/>
+  </g>
+
+  <!-- Safe Surface Grid -->
+  <g transform="translate(80, 360)">
+    <text x="220" y="30" font-family="sans-serif" font-weight="800" font-size="14" fill="#0f172a" text-anchor="middle">
+      COMPATIBLE WITH MULTIPLE SURFACES:
+    </text>
+    
+    <g transform="translate(0, 50)">
+      <rect x="0" y="0" width="95" height="90" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
+      <text x="47" y="45" font-family="sans-serif" font-weight="800" font-size="20" fill="#78350f" text-anchor="middle">🪵</text>
+      <text x="47" y="70" font-family="sans-serif" font-weight="700" font-size="11" fill="#334155" text-anchor="middle">Solid Wood</text>
+    </g>
+
+    <g transform="translate(115, 50)">
+      <rect x="0" y="0" width="95" height="90" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
+      <text x="47" y="45" font-family="sans-serif" font-weight="800" font-size="20" fill="#0284c7" text-anchor="middle">🪟</text>
+      <text x="47" y="70" font-family="sans-serif" font-weight="700" font-size="11" fill="#334155" text-anchor="middle">Glass &amp; Acrylic</text>
+    </g>
+
+    <g transform="translate(230, 50)">
+      <rect x="0" y="0" width="95" height="90" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
+      <text x="47" y="45" font-family="sans-serif" font-weight="800" font-size="20" fill="#64748b" text-anchor="middle">⚙️</text>
+      <text x="47" y="70" font-family="sans-serif" font-weight="700" font-size="11" fill="#334155" text-anchor="middle">Metal / Steel</text>
+    </g>
+
+    <g transform="translate(345, 50)">
+      <rect x="0" y="0" width="95" height="90" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
+      <text x="47" y="45" font-family="sans-serif" font-weight="800" font-size="20" fill="#0f766e" text-anchor="middle">🏛️</text>
+      <text x="47" y="70" font-family="sans-serif" font-weight="700" font-size="11" fill="#334155" text-anchor="middle">Tile &amp; Marble</text>
+    </g>
+  </g>
+
+  <rect x="100" y="525" width="400" height="35" rx="17" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  <text x="300" y="547" font-family="sans-serif" font-weight="700" font-size="11" fill="#047857" text-anchor="middle">
+    ✓ Press firmly for 30 seconds for maximum 24-hour adhesive bond
+  </text>
+</svg>

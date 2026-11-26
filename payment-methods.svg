@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 40" width="450" height="40">
+  <style>
+    .badge { rx: 6; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.2; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 11px; font-weight: 700; }
+  </style>
+  <!-- UPI Badge -->
+  <g transform="translate(0, 2)">
+    <rect width="65" height="34" class="badge"/>
+    <text x="32" y="21" class="txt" fill="#0f766e" text-anchor="middle">UPI</text>
+  </g>
+  <!-- RuPay Badge -->
+  <g transform="translate(75, 2)">
+    <rect width="70" height="34" class="badge"/>
+    <text x="35" y="21" class="txt" fill="#0369a1" text-anchor="middle">RuPay</text>
+  </g>
+  <!-- Visa Badge -->
+  <g transform="translate(155, 2)">
+    <rect width="65" height="34" class="badge"/>
+    <text x="32" y="21" class="txt" fill="#1e3a8a" text-anchor="middle">VISA</text>
+  </g>
+  <!-- Mastercard Badge -->
+  <g transform="translate(230, 2)">
+    <rect width="65" height="34" class="badge"/>
+    <circle cx="27" cy="17" r="9" fill="#ef4444" fill-opacity="0.8"/>
+    <circle cx="37" cy="17" r="9" fill="#f59e0b" fill-opacity="0.8"/>
+  </g>
+  <!-- NetBanking Badge -->
+  <g transform="translate(305, 2)">
+    <rect width="80" height="34" class="badge"/>
+    <text x="40" y="21" class="txt" fill="#334155" text-anchor="middle">NetBanking</text>
+  </g>
+  <!-- COD Badge -->
+  <g transform="translate(395, 2)">
+    <rect width="55" height="34" class="badge"/>
+    <text x="27" y="21" class="txt" fill="#16a34a" text-anchor="middle">COD</text>
+  </g>
+</svg>

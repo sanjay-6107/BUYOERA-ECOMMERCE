@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="wcBg2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#wcBg2)"/>
+
+  <text x="300" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20" fill="#0f172a" text-anchor="middle">CLEAN WORKSPACE TRANSFORMATION</text>
+  <text x="300" y="80" font-family="sans-serif" font-weight="600" font-size="12" fill="#2563eb" text-anchor="middle">Prevents Cables from Falling Behind Desks or Tangling</text>
+
+  <!-- Desk Surface Illustration -->
+  <g transform="translate(60, 140)">
+    <!-- Sleek Wooden Desktop -->
+    <rect x="0" y="80" width="480" height="20" rx="4" fill="#334155"/>
+    <rect x="0" y="100" width="480" height="150" fill="#1e293b"/>
+    <text x="240" y="180" font-family="sans-serif" font-weight="800" font-size="16" fill="#475569" text-anchor="middle">DESK SETUP</text>
+
+    <!-- Laptop Edge on Desk -->
+    <rect x="60" y="30" width="160" height="50" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="120" y="70" width="40" height="10" rx="3" fill="#64748b"/>
+
+    <!-- Mounted BUYOERA 5-Slot Clip on Desk Edge -->
+    <rect x="260" y="65" width="180" height="35" rx="10" fill="#0f172a" stroke="#3b82f6" stroke-width="2"/>
+
+    <!-- Cables neatly routed through slots -->
+    <!-- Cable 1: Blue USB-C to Laptop -->
+    <path d="M140 70 C180 70 240 60 280 75 L280 250" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+    <!-- Cable 2: Red Lightning Cable -->
+    <path d="M315 20 C315 50 315 65 315 250" fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+    <rect x="307" y="10" width="16" height="20" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+    <!-- Cable 3: Green Monitor DisplayPort -->
+    <path d="M350 10 C350 45 350 65 350 250" fill="none" stroke="#10b981" stroke-width="6" stroke-linecap="round"/>
+    <!-- Cable 4: Orange Headphone Audio Wire -->
+    <path d="M385 30 C385 50 385 65 385 250" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <!-- Cable 5: Grey Power Adapter -->
+    <path d="M420 40 C420 55 420 65 420 250" fill="none" stroke="#64748b" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- Key Specs Box -->
+  <g transform="translate(80, 440)">
+    <rect x="0" y="0" width="440" height="100" rx="12" fill="#0f172a"/>
+    <text x="220" y="35" font-family="sans-serif" font-weight="800" font-size="14" fill="#f59e0b" text-anchor="middle">
+      UNIVERSAL CABLE COMPATIBILITY
+    </text>
+    <text x="220" y="65" font-family="sans-serif" font-weight="500" font-size="11" fill="#cbd5e1" text-anchor="middle">
+      iPhone Lightning • Type-C • Micro-USB • HDMI • Audio 3.5mm • Mouse
+    </text>
+    <text x="220" y="85" font-family="sans-serif" font-weight="700" font-size="10" fill="#38bdf8" text-anchor="middle">
+      Fits All Wires from 2.5mm up to 7mm Thickness
+    </text>
+  </g>
+</svg>

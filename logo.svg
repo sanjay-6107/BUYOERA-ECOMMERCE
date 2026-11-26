@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="320" height="60">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Modern Geometric B Monogram Icon -->
+  <g transform="translate(6, 6)">
+    <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#logoGrad)"/>
+    <!-- Outer loop -->
+    <path d="M14 12 h12 a8 8 0 0 1 0 12 h-12 z" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 24 h14 a8 8 0 0 1 0 12 h-14 z" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 12 v24" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Dynamic forward dot / sparkle -->
+    <circle cx="34" cy="18" r="3" fill="url(#accentGrad)"/>
+    <path d="M28 30 l4 -4 l4 4" fill="none" stroke="url(#accentGrad)" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+  <!-- Brand Typography -->
+  <text x="66" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="900" font-size="26" fill="#0a192f" letter-spacing="1.5">BUYOERA</text>
+  <text x="68" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-weight="600" font-size="8.5" fill="#f59e0b" letter-spacing="2.2">SHOP SMART. LIVE BETTER.</text>
+</svg>

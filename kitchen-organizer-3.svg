@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="koBg3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#koBg3)"/>
+
+  <text x="300" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20" fill="#0f172a" text-anchor="middle">PANTRY &amp; CABINET SPACE SAVER</text>
+  <text x="300" y="80" font-family="sans-serif" font-weight="600" font-size="12" fill="#2563eb" text-anchor="middle">Transform Deep Dark Shelves into Instant Easy-Reach Storage</text>
+
+  <!-- Split Comparison (Cluttered vs Organized) -->
+  <g transform="translate(60, 120)">
+    <!-- Before Side -->
+    <rect x="0" y="0" width="225" height="320" rx="14" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+    <rect x="15" y="15" width="80" height="26" rx="6" fill="#ef4444"/>
+    <text x="55" y="32" font-family="sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">BEFORE</text>
+    <!-- Messy bottles knocked over -->
+    <rect x="30" y="100" width="30" height="70" rx="6" fill="#ca8a04" transform="rotate(35 45 135)"/>
+    <rect x="80" y="140" width="35" height="60" rx="6" fill="#dc2626" transform="rotate(-25 95 170)"/>
+    <rect x="130" y="90" width="40" height="90" rx="6" fill="#ea580c"/>
+    <rect x="50" y="220" width="45" height="75" rx="6" fill="#475569"/>
+    <rect x="115" y="210" width="55" height="85" rx="6" fill="#16a34a"/>
+    <text x="112" y="305" font-family="sans-serif" font-weight="700" font-size="10" fill="#ef4444" text-anchor="middle">Hard to reach • Bottles knocked over</text>
+
+    <!-- After Side (BUYOERA Turntable) -->
+    <rect x="255" y="0" width="225" height="320" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect x="270" y="15" width="80" height="26" rx="6" fill="#10b981"/>
+    <text x="310" y="32" font-family="sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">AFTER</text>
+
+    <!-- Turntable holding items in harmony -->
+    <ellipse cx="367" cy="230" rx="95" ry="30" fill="#0f2445"/>
+    <ellipse cx="367" cy="225" rx="90" ry="26" fill="#f8fafc" stroke="#cbd5e1"/>
+    <rect x="315" y="125" width="24" height="75" rx="5" fill="#ca8a04"/>
+    <rect x="345" y="140" width="22" height="60" rx="5" fill="#dc2626"/>
+    <rect x="375" y="130" width="26" height="70" rx="5" fill="#ea580c"/>
+    <rect x="408" y="145" width="24" height="55" rx="5" fill="#16a34a"/>
+
+    <path d="M300 245 A80 20 0 0 0 435 245" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="6,4"/>
+    <polygon points="440,243 430,235 433,248" fill="#2563eb"/>
+    <text x="367" y="305" font-family="sans-serif" font-weight="700" font-size="10" fill="#10b981" text-anchor="middle">100% Accessible with a gentle spin</text>
+  </g>
+
+  <!-- Usage Locations -->
+  <g transform="translate(60, 480)">
+    <rect x="0" y="0" width="480" height="60" rx="12" fill="#0f172a"/>
+    <text x="240" y="26" font-family="sans-serif" font-weight="800" font-size="12" fill="#f59e0b" text-anchor="middle">
+      MULTIPURPOSE ORGANIZATION ANYWHERE:
+    </text>
+    <text x="240" y="47" font-family="sans-serif" font-weight="600" font-size="11" fill="#e2e8f0" text-anchor="middle">
+      Kitchen Cabinets • Refrigerator Shelves • Bathroom Vanity • Dressing Table Cosmetics
+    </text>
+  </g>
+</svg>

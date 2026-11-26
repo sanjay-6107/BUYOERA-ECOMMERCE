@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="wcBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
+    <filter id="wcShadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="600" height="600" fill="url(#wcBg)"/>
+
+  <!-- Heading -->
+  <text x="300" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="22" fill="#0f172a" text-anchor="middle">BUYOERA PRO CABLE MANAGEMENT</text>
+  <text x="300" y="80" font-family="sans-serif" font-weight="700" font-size="12" fill="#2563eb" text-anchor="middle">PACK OF 20 MULTI-SLOT HEAVY-DUTY SILICONE CLIPS</text>
+
+  <!-- Pack Grid Showcase -->
+  <!-- 5-Slot Large Clips (Row 1) -->
+  <g filter="url(#wcShadow)" transform="translate(80, 110)">
+    <!-- Clip 1 (Black) -->
+    <rect x="0" y="0" width="200" height="50" rx="14" fill="#0f172a"/>
+    <rect x="20" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <rect x="55" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <rect x="90" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <rect x="125" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <rect x="160" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <text x="100" y="68" font-family="sans-serif" font-weight="700" font-size="10" fill="#64748b" text-anchor="middle">5-SLOT ORGANIZER</text>
+
+    <!-- Clip 2 (White) -->
+    <rect x="240" y="0" width="200" height="50" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="260" y="10" width="14" height="30" rx="5" fill="#0f172a"/>
+    <rect x="295" y="10" width="14" height="30" rx="5" fill="#0f172a"/>
+    <rect x="330" y="10" width="14" height="30" rx="5" fill="#0f172a"/>
+    <rect x="365" y="10" width="14" height="30" rx="5" fill="#0f172a"/>
+    <rect x="400" y="10" width="14" height="30" rx="5" fill="#0f172a"/>
+    <text x="340" y="68" font-family="sans-serif" font-weight="700" font-size="10" fill="#64748b" text-anchor="middle">5-SLOT ARCTIC WHITE</text>
+  </g>
+
+  <!-- 3-Slot Clips (Row 2) -->
+  <g filter="url(#wcShadow)" transform="translate(80, 205)">
+    <rect x="0" y="0" width="130" height="50" rx="14" fill="#0f172a"/>
+    <rect x="18" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <rect x="58" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <rect x="98" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+
+    <rect x="155" y="0" width="130" height="50" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="173" y="10" width="14" height="30" rx="5" fill="#0f172a"/>
+    <rect x="213" y="10" width="14" height="30" rx="5" fill="#0f172a"/>
+    <rect x="253" y="10" width="14" height="30" rx="5" fill="#0f172a"/>
+
+    <rect x="310" y="0" width="130" height="50" rx="14" fill="#0f172a"/>
+    <rect x="328" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <rect x="368" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <rect x="408" y="10" width="14" height="30" rx="5" fill="#f8fafc"/>
+  </g>
+
+  <!-- 2-Slot & 1-Slot Clips (Row 3) -->
+  <g filter="url(#wcShadow)" transform="translate(80, 290)">
+    <rect x="0" y="0" width="90" height="48" rx="14" fill="#0f172a"/>
+    <rect x="18" y="9" width="14" height="30" rx="5" fill="#f8fafc"/>
+    <rect x="58" y="9" width="14" height="30" rx="5" fill="#f8fafc"/>
+
+    <rect x="110" y="0" width="90" height="48" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="128" y="9" width="14" height="30" rx="5" fill="#0f172a"/>
+    <rect x="168" y="9" width="14" height="30" rx="5" fill="#0f172a"/>
+
+    <rect x="220" y="0" width="50" height="48" rx="14" fill="#0f172a"/>
+    <rect x="18" y="9" width="14" height="30" rx="5" fill="#f8fafc" transform="translate(220, 0)"/>
+
+    <rect x="290" y="0" width="50" height="48" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="18" y="9" width="14" height="30" rx="5" fill="#0f172a" transform="translate(290, 0)"/>
+
+    <rect x="360" y="0" width="80" height="48" rx="10" fill="#dc2626"/>
+    <text x="400" y="24" font-family="sans-serif" font-weight="900" font-size="12" fill="#ffffff" text-anchor="middle">3M TAPE</text>
+    <text x="400" y="38" font-family="sans-serif" font-weight="700" font-size="8" fill="#ffffff" text-anchor="middle">INCLUDED</text>
+  </g>
+
+  <!-- Feature Highlights Box -->
+  <g transform="translate(70, 390)">
+    <rect x="0" y="0" width="460" height="150" rx="16" fill="#0a192f"/>
+    <text x="30" y="40" font-family="sans-serif" font-weight="800" font-size="15" fill="#f59e0b">✓ Pack Contents (20 Pieces Total):</text>
+    <text x="30" y="70" font-family="sans-serif" font-weight="600" font-size="12" fill="#e2e8f0">• 2x Five-Slot Clips (Desk Master Hubs)</text>
+    <text x="30" y="92" font-family="sans-serif" font-weight="600" font-size="12" fill="#e2e8f0">• 4x Three-Slot Clips (Workstation &amp; Monitors)</text>
+    <text x="30" y="114" font-family="sans-serif" font-weight="600" font-size="12" fill="#e2e8f0">• 6x Double-Slot Clips (Bedside &amp; Nightstands)</text>
+    <text x="30" y="136" font-family="sans-serif" font-weight="600" font-size="12" fill="#e2e8f0">• 8x Single-Slot Clips (Car Dash, Wall &amp; Audio Cords)</text>
+    <circle cx="400" cy="75" r="38" fill="#1e3a8a"/>
+    <text x="400" y="70" font-family="sans-serif" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle">20</text>
+    <text x="400" y="88" font-family="sans-serif" font-weight="700" font-size="9" fill="#f59e0b" text-anchor="middle">PIECES</text>
+  </g>
+</svg>

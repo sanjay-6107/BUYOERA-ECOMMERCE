@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg2)"/>
+  
+  <!-- In-Action Detail: Sneaker Cleaning Demo -->
+  <text x="300" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20" fill="#0f172a" text-anchor="middle">ACTIVE DEEP FOAM PENETRATION</text>
+  <text x="300" y="85" font-family="sans-serif" font-weight="600" font-size="12" fill="#2563eb" text-anchor="middle">Lifts Tough Stains, Mud &amp; Grease Without Color Bleeding</text>
+
+  <!-- Sneaker Midsole Illustration -->
+  <g transform="translate(100, 200)">
+    <!-- Dirty Half (Left) -->
+    <path d="M0 180 C80 180 140 160 200 150 L200 230 C120 235 50 235 0 230 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M20 190 Q60 205 100 195 M50 210 Q90 220 130 205" stroke="#78350f" stroke-width="4" opacity="0.6"/>
+    <!-- Before Label -->
+    <rect x="30" y="245" width="80" height="26" rx="6" fill="#ef4444"/>
+    <text x="70" y="262" font-family="sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">BEFORE</text>
+
+    <!-- Clean Pristine Half (Right) -->
+    <path d="M200 150 C260 140 320 110 380 130 L380 230 C320 235 260 235 200 230 Z" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+    <!-- After Label -->
+    <rect x="270" y="245" width="80" height="26" rx="6" fill="#10b981"/>
+    <text x="310" y="262" font-family="sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">AFTER</text>
+
+    <!-- Dividing Clean Line -->
+    <line x1="200" y1="120" x2="200" y2="280" stroke="#2563eb" stroke-width="3" stroke-dasharray="6,4"/>
+
+    <!-- Rich Foam Bubbles -->
+    <circle cx="190" cy="140" r="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <circle cx="210" cy="130" r="18" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <circle cx="200" cy="160" r="12" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <circle cx="225" cy="155" r="15" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <circle cx="175" cy="158" r="10" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  </g>
+
+  <!-- Hardwood Brush Scrubbing Overlay -->
+  <g transform="translate(260, 180) rotate(-20)">
+    <rect x="0" y="0" width="140" height="36" rx="10" fill="#b45309"/>
+    <text x="70" y="22" font-family="sans-serif" font-weight="800" font-size="10" fill="#fef3c7" text-anchor="middle">BUYOERA PRO</text>
+    <rect x="10" y="36" width="120" height="28" fill="#451a03"/>
+  </g>
+
+  <!-- Safe Material Badges at Bottom -->
+  <g transform="translate(80, 510)">
+    <rect x="0" y="0" width="95" height="32" rx="16" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="47" y="20" font-family="sans-serif" font-weight="700" font-size="10" fill="#334155" text-anchor="middle">✓ Mesh &amp; Knit</text>
+    <rect x="115" y="0" width="95" height="32" rx="16" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="162" y="20" font-family="sans-serif" font-weight="700" font-size="10" fill="#334155" text-anchor="middle">✓ Pure Leather</text>
+    <rect x="230" y="0" width="95" height="32" rx="16" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="277" y="20" font-family="sans-serif" font-weight="700" font-size="10" fill="#334155" text-anchor="middle">✓ Suede &amp; Nubuck</text>
+    <rect x="345" y="0" width="95" height="32" rx="16" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="392" y="20" font-family="sans-serif" font-weight="700" font-size="10" fill="#334155" text-anchor="middle">✓ Canvas &amp; Sole</text>
+  </g>
+</svg>

@@ -1,0 +1,1502 @@
+/**
+ * BUYOERA - Surrealist Neumorphism Design System
+ * Brand: BUYOERA (Shop Smart. Live Better.)
+ * Aesthetic: Surrealism + Neumorphism (Soft UI Emboss/Deboss, Floating Physics, Cosmic Twilight Palette)
+ * Menu Panel: Explicitly styled in a ROW (horizontal flex, zero bullets, tactile pills)
+ */
+
+/* -------------------------------------------------------------
+ * 1. Root Tokens & Neumorphic Geometry
+ * ----------------------------------------------------------- */
+:root {
+  /* Soft Neumorphic Canvas */
+  --neu-canvas: #e1e8f2;
+  --neu-canvas-light: #edf3fb;
+  --neu-canvas-dark: #cbd7e5;
+  --neu-surface: #e1e8f2;
+  --neu-surface-active: #d5e0ee;
+
+  /* Surreal Cosmic Twilight Accents */
+  --surreal-navy: #071327;
+  --surreal-midnight: #0c1c38;
+  --surreal-astral: #1e3a8a;
+  --surreal-nebula: #6366f1;
+  --surreal-aurora: #8b5cf6;
+  --surreal-gold: #f59e0b;
+  --surreal-amber: #d97706;
+  --surreal-starlight: #fffbeb;
+  --surreal-glow: rgba(99, 102, 241, 0.18);
+
+  /* Typography & High Contrast */
+  --text-primary: #071327;
+  --text-navy: #071327;
+  --text-secondary: #2e3e56;
+  --text-muted: #5e7290;
+  --text-light: #8ca0bb;
+
+  /* Functional Status */
+  --success: #10b981;
+  --success-bg: #d1fae5;
+  --danger: #ef4444;
+  --danger-bg: #fee2e2;
+  --warning: #f59e0b;
+  --info: #0284c7;
+
+  /* Neumorphic Dual Shadows (Soft UI Extrusion & Deboss) */
+  --neu-raised: 
+    10px 10px 22px #bdc9db, 
+    -10px -10px 22px #ffffff;
+
+  --neu-raised-hover: 
+    14px 14px 28px #b4c2d5, 
+    -14px -14px 28px #ffffff,
+    0 0 24px var(--surreal-glow);
+
+  --neu-sunken: 
+    inset 6px 6px 12px #becadb, 
+    inset -6px -6px 12px #ffffff;
+
+  --neu-sunken-focus: 
+    inset 7px 7px 14px #b2c0d2, 
+    inset -7px -7px 14px #ffffff,
+    0 0 0 2px rgba(99, 102, 241, 0.35);
+
+  --neu-btn-navy: 
+    7px 7px 16px rgba(7, 19, 39, 0.35), 
+    -7px -7px 16px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(30, 58, 138, 0.25);
+
+  --neu-btn-gold: 
+    7px 7px 16px rgba(217, 119, 6, 0.32), 
+    -7px -7px 16px rgba(255, 255, 255, 0.95),
+    0 0 18px rgba(245, 158, 11, 0.3);
+
+  --neu-btn-pressed: 
+    inset 5px 5px 10px #b2bfd1, 
+    inset -5px -5px 10px #ffffff;
+
+  /* Surrealist Organic Fluid Contours */
+  --surreal-contour-card: 28px 18px 32px 20px;
+  --surreal-contour-plate: 22px 14px 26px 16px;
+  --radius-pill: 9999px;
+
+  /* Physics Transitions */
+  --transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-fast: all 0.15s ease-out;
+}
+
+/* -------------------------------------------------------------
+ * 2. Surreal Ambient Canvas & Levitation Keyframes
+ * ----------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Plus Jakarta Sans", "Inter", "Segoe UI", Roboto, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--neu-canvas);
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(99, 102, 241, 0.1) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 85%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.45) 0%, transparent 60%);
+  background-attachment: fixed;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-navy {
+  color: var(--surreal-navy) !important;
+}
+
+a {
+  color: var(--surreal-astral);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--surreal-nebula);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Surreal Animations */
+@keyframes surrealFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.4deg);
+  }
+}
+
+@keyframes astralShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* -------------------------------------------------------------
+ * 3. Announcement Ribbon (Cosmic Twilight Strip)
+ * ----------------------------------------------------------- */
+.announcement-bar {
+  background: linear-gradient(135deg, #061122, #0d2140, #141738);
+  background-size: 200% 200%;
+  animation: astralShimmer 12s ease infinite;
+  color: #ffffff;
+  font-size: 0.8125rem;
+  padding: 9px 0;
+  box-shadow: 
+    0 4px 16px rgba(6, 17, 34, 0.3),
+    inset 0 -1px 2px rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 1025;
+}
+
+.announcement-bar .badge-deal {
+  background: linear-gradient(135deg, #fbbf24, #d97706);
+  color: #071327;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  margin-right: 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.6px;
+  box-shadow: 
+    0 0 12px rgba(251, 191, 36, 0.5),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.announcement-link {
+  color: #e2e8f0;
+  opacity: 0.9;
+  margin-left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.announcement-link:hover {
+  color: var(--surreal-gold);
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------------------------------
+ * 4. Header & Search Bar
+ * ----------------------------------------------------------- */
+.site-header {
+  background: rgba(225, 232, 242, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  padding: 12px 0 0 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    0 10px 25px rgba(189, 201, 219, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  transition: var(--transition);
+}
+
+.site-header.scrolled {
+  background: rgba(225, 232, 242, 0.98);
+  box-shadow: 
+    0 16px 32px rgba(180, 194, 213, 0.65),
+    0 0 20px rgba(99, 102, 241, 0.1);
+}
+
+.brand-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(7, 19, 39, 0.12));
+}
+
+/* Sunken Neumorphic Search Bar */
+.header-search-form {
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+}
+
+.header-search-form input {
+  width: 100%;
+  padding: 13px 52px 13px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--neu-canvas);
+  color: var(--text-primary);
+  box-shadow: var(--neu-sunken);
+  transition: var(--transition);
+}
+
+.header-search-form input:focus {
+  outline: none;
+  box-shadow: var(--neu-sunken-focus);
+}
+
+.header-search-form input::placeholder {
+  color: var(--text-light);
+}
+
+.header-search-form button {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(145deg, #183562, #071327);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 
+    4px 4px 10px rgba(7, 19, 39, 0.3),
+    -3px -3px 8px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(99, 102, 241, 0.25);
+  transition: var(--transition);
+}
+
+.header-search-form button:hover {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 
+    0 0 18px rgba(99, 102, 241, 0.5),
+    4px 4px 12px rgba(7, 19, 39, 0.4);
+}
+
+.header-search-form button:active {
+  transform: translateY(-50%) scale(0.94);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Embossed Neumorphic Action Pills (Track, Account, Cart) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  background: var(--neu-canvas);
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: var(--neu-raised);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: var(--transition);
+  position: relative;
+}
+
+.header-action-btn:hover {
+  transform: translateY(-2px);
+  color: var(--surreal-nebula);
+  box-shadow: var(--neu-raised-hover);
+}
+
+.header-action-btn:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow: var(--neu-btn-pressed);
+}
+
+.header-action-btn i {
+  font-size: 1.15rem;
+  color: var(--surreal-navy);
+}
+
+.badge-counter,
+.cart-count-badge {
+  background: linear-gradient(135deg, #fbbf24, #d97706);
+  color: #071327;
+  font-size: 0.72rem;
+  font-weight: 900;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 0 10px rgba(251, 191, 36, 0.6),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* -------------------------------------------------------------
+ * 5. MENU PANEL (STRICTLY IN A ROW - HORIZONTAL, ZERO BULLETS)
+ * ----------------------------------------------------------- */
+.sub-navbar {
+  display: block;
+  background: var(--neu-canvas);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(189, 201, 219, 0.5);
+  padding: 10px 0;
+  margin-top: 10px;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Row-based layout strictly enforced */
+.sub-nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 12px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+.sub-nav-links li {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+.sub-nav-links li::marker,
+.sub-nav-links li::before {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Category Dropdown Pill in Menu Panel */
+.category-dropdown-btn {
+  background: linear-gradient(145deg, #183562, #071327) !important;
+  color: #ffffff !important;
+  padding: 8px 18px !important;
+  border-radius: var(--radius-pill) !important;
+  font-weight: 800 !important;
+  font-size: 0.88rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  text-decoration: none !important;
+  box-shadow: 
+    4px 4px 10px rgba(7, 19, 39, 0.35),
+    -3px -3px 8px rgba(255, 255, 255, 0.8),
+    0 0 12px rgba(99, 102, 241, 0.25) !important;
+  transition: var(--transition) !important;
+  border: none !important;
+}
+
+.category-dropdown-btn:hover {
+  transform: translateY(-2px);
+  color: #ffffff !important;
+  box-shadow: 
+    0 0 18px rgba(99, 102, 241, 0.55),
+    5px 5px 12px rgba(7, 19, 39, 0.45) !important;
+}
+
+.category-dropdown-btn i {
+  color: var(--surreal-gold) !important;
+}
+
+/* Menu Panel Horizontal Row Links */
+.sub-nav-links a:not(.category-dropdown-btn) {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 7px 18px !important;
+  border-radius: var(--radius-pill) !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  background: var(--neu-canvas) !important;
+  box-shadow: 3px 3px 7px #bdcadb, -3px -3px 7px #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  transition: var(--transition) !important;
+  white-space: nowrap !important;
+}
+
+.sub-nav-links a:not(.category-dropdown-btn):hover {
+  color: var(--surreal-nebula) !important;
+  transform: translateY(-2px);
+  box-shadow: 
+    5px 5px 12px #b4c2d5, 
+    -5px -5px 12px #ffffff, 
+    0 0 14px rgba(99, 102, 241, 0.22) !important;
+}
+
+.sub-nav-links a:not(.category-dropdown-btn):active {
+  transform: translateY(1px);
+  box-shadow: inset 3px 3px 6px #becadb, inset -3px -3px 6px #ffffff !important;
+}
+
+/* Right-aligned Navigation Links (About Us & Contact) */
+.sub-navbar .text-secondary {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 6px 14px !important;
+  border-radius: var(--radius-pill) !important;
+  color: var(--text-secondary) !important;
+  font-weight: 700 !important;
+  font-size: 0.86rem !important;
+  text-decoration: none !important;
+  background: var(--neu-canvas) !important;
+  box-shadow: 2px 2px 5px #becadb, -2px -2px 5px #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  transition: var(--transition) !important;
+}
+
+.sub-navbar .text-secondary:hover {
+  color: var(--surreal-nebula) !important;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 10px #b4c2d5, -4px -4px 10px #ffffff !important;
+}
+
+/* -------------------------------------------------------------
+ * 6. Tactile Neumorphic Buttons
+ * ----------------------------------------------------------- */
+.btn {
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  padding: 12px 28px;
+  font-size: 0.92rem;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+/* BUYOERA Accent (Surreal Gold Neumorphic Pill) */
+.btn-buyoera-accent,
+.btn-gold,
+.btn-warning {
+  background: linear-gradient(145deg, #fbb824, #d47607);
+  color: #071327 !important;
+  font-weight: 800;
+  box-shadow: var(--neu-btn-gold);
+}
+
+.btn-buyoera-accent:hover,
+.btn-gold:hover,
+.btn-warning:hover {
+  background: linear-gradient(145deg, #fcd34d, #e08309);
+  color: #071327 !important;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    10px 10px 22px rgba(217, 119, 6, 0.38),
+    -8px -8px 20px #ffffff,
+    0 0 24px rgba(245, 158, 11, 0.55);
+}
+
+.btn-buyoera-accent:active,
+.btn-gold:active,
+.btn-warning:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow: 
+    inset 5px 5px 10px rgba(180, 83, 9, 0.45),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* BUYOERA Primary (Cosmic Astral Navy Soft Button) */
+.btn-buyoera-primary,
+.btn-primary {
+  background: linear-gradient(145deg, #183562, #071327);
+  color: #ffffff !important;
+  box-shadow: var(--neu-btn-navy);
+}
+
+.btn-buyoera-primary:hover,
+.btn-primary:hover {
+  background: linear-gradient(145deg, #1e3f73, #0b1e3f);
+  color: #ffffff !important;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    10px 10px 22px rgba(7, 19, 39, 0.45),
+    -8px -8px 20px #ffffff,
+    0 0 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn-buyoera-primary:active,
+.btn-primary:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow: 
+    inset 5px 5px 10px rgba(0, 0, 0, 0.55),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.15);
+}
+
+/* BUYOERA Outline (Extruded Neumorphic Canvas Pill) */
+.btn-buyoera-outline,
+.btn-outline-primary {
+  background: var(--neu-canvas);
+  color: var(--surreal-navy) !important;
+  box-shadow: var(--neu-raised);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-buyoera-outline:hover,
+.btn-outline-primary:hover {
+  color: var(--surreal-nebula) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--neu-raised-hover);
+}
+
+.btn-buyoera-outline:active,
+.btn-outline-primary:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow: var(--neu-btn-pressed);
+}
+
+.btn-outline-light {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    6px 6px 16px rgba(0, 0, 0, 0.3),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* -------------------------------------------------------------
+ * 7. Sunken Neumorphic Form Controls
+ * ----------------------------------------------------------- */
+.form-label {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+  background-color: var(--neu-canvas);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 16px;
+  padding: 13px 20px;
+  font-size: 0.92rem;
+  box-shadow: var(--neu-sunken);
+  transition: var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  background-color: var(--neu-canvas-light);
+  box-shadow: var(--neu-sunken-focus);
+  color: var(--text-primary);
+}
+
+.input-group-text {
+  background-color: var(--neu-canvas);
+  border: none;
+  box-shadow: var(--neu-sunken);
+  color: var(--text-secondary);
+  border-radius: 16px 0 0 16px;
+}
+
+.form-check-input {
+  background-color: var(--neu-canvas);
+  border: none;
+  box-shadow: var(--neu-sunken);
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.form-check-input:checked {
+  background-color: var(--surreal-astral);
+  box-shadow: 
+    0 0 12px rgba(30, 58, 138, 0.5),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* -------------------------------------------------------------
+ * 8. Universal Neumorphic Cards & Containers
+ * ----------------------------------------------------------- */
+.card,
+.clay-card,
+.neu-card {
+  background: var(--neu-canvas) !important;
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+  border-radius: var(--surreal-contour-card) !important;
+  box-shadow: var(--neu-raised) !important;
+  transition: var(--transition);
+  position: relative;
+}
+
+.card:hover,
+.clay-card:hover,
+.neu-card:hover {
+  box-shadow: var(--neu-raised-hover) !important;
+}
+
+/* -------------------------------------------------------------
+ * 9. Surrealist Hero Section (Cosmic Dreamscape Monolith)
+ * ----------------------------------------------------------- */
+.hero-section {
+  background: linear-gradient(145deg, #061122 0%, #0d2140 45%, #1e133c 100%);
+  color: #ffffff;
+  padding: 75px 0 65px;
+  margin: 18px 18px 36px;
+  border-radius: 36px 24px 44px 28px;
+  box-shadow: 
+    16px 16px 36px rgba(7, 19, 39, 0.4),
+    -10px -10px 24px rgba(255, 255, 255, 0.5),
+    0 0 45px rgba(99, 102, 241, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: surrealFloat 8s ease-in-out infinite alternate;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: -90px;
+  left: 20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.22) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: surrealFloat 6s ease-in-out infinite alternate-reverse;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--surreal-gold);
+  padding: 9px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    0 0 16px rgba(245, 158, 11, 0.3),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1.2px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, #fcd34d, #f59e0b, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: surrealFloat 6s ease-in-out infinite;
+}
+
+.hero-subtitle {
+  font-size: 1.12rem;
+  opacity: 0.9;
+  max-width: 530px;
+  margin-bottom: 34px;
+  line-height: 1.7;
+}
+
+.hero-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.hero-stat {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  padding: 14px 20px;
+  box-shadow: 
+    4px 4px 12px rgba(0, 0, 0, 0.25),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+  min-width: 105px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-stat h5 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--surreal-gold);
+  margin-bottom: 2px;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+.hero-stat p {
+  font-size: 0.76rem;
+  color: #cbd5e1;
+  margin: 0;
+  font-weight: 600;
+}
+
+.hero-banner-image {
+  max-height: 420px;
+  filter: drop-shadow(14px 24px 40px rgba(0, 0, 0, 0.55));
+  animation: surrealFloat 5s ease-in-out infinite alternate;
+  transition: var(--transition);
+}
+
+.hero-banner-image:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* -------------------------------------------------------------
+ * 10. Trust Bar (Surreal Neumorphic Emblems)
+ * ----------------------------------------------------------- */
+.trust-bar {
+  padding: 24px 0 44px;
+}
+
+.trust-item {
+  background: var(--neu-canvas);
+  border-radius: var(--surreal-contour-card);
+  padding: 24px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: var(--neu-raised);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.trust-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--neu-raised-hover);
+}
+
+.trust-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--neu-canvas);
+  color: var(--surreal-astral);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--neu-sunken);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.trust-item:hover .trust-icon {
+  background: linear-gradient(145deg, #183562, #071327);
+  color: #ffffff;
+  box-shadow: 
+    0 0 18px rgba(99, 102, 241, 0.45),
+    4px 4px 10px rgba(7, 19, 39, 0.3);
+  transform: scale(1.1);
+}
+
+.trust-content h6 {
+  font-weight: 800;
+  font-size: 0.94rem;
+  margin-bottom: 2px;
+  color: var(--surreal-navy);
+}
+
+.trust-content p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* -------------------------------------------------------------
+ * 11. Section Title Wrappers
+ * ----------------------------------------------------------- */
+.section-tag {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--surreal-nebula);
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-weight: 900;
+  font-size: 2.1rem;
+  color: var(--surreal-navy);
+  letter-spacing: -0.6px;
+  margin-bottom: 0;
+}
+
+.section-title-wrap {
+  margin-bottom: 32px;
+}
+
+/* -------------------------------------------------------------
+ * 12. Category Cards (Surreal Levitating Pedestals)
+ * ----------------------------------------------------------- */
+.category-card {
+  background: var(--neu-canvas);
+  border-radius: var(--surreal-contour-card);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--neu-raised);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  display: block;
+  color: var(--text-primary);
+  height: 100%;
+}
+
+.category-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--neu-raised-hover);
+  color: var(--surreal-nebula);
+}
+
+.category-card-img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+  display: block;
+  background: var(--neu-canvas);
+  border-radius: 50%;
+  padding: 18px;
+  box-shadow: var(--neu-sunken);
+  transition: var(--transition);
+}
+
+.category-card:hover .category-card-img {
+  box-shadow: 
+    0 0 24px rgba(99, 102, 241, 0.35),
+    var(--neu-raised);
+  transform: scale(1.12);
+}
+
+.category-card-title {
+  font-weight: 800;
+  font-size: 1.18rem;
+  margin-bottom: 6px;
+}
+
+.category-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* -------------------------------------------------------------
+ * 13. Product Cards (Surreal Neumorphic Display Cushions)
+ * ----------------------------------------------------------- */
+.product-card {
+  background: var(--neu-canvas);
+  border-radius: var(--surreal-contour-card);
+  padding: 20px;
+  box-shadow: var(--neu-raised);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--neu-raised-hover);
+}
+
+.product-card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: 
+    0 4px 12px rgba(220, 38, 38, 0.4),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.7);
+  z-index: 3;
+}
+
+/* Sunken Neumorphic Plate for Product Image */
+.product-card-img-wrap {
+  background: var(--neu-canvas);
+  border-radius: var(--surreal-contour-plate);
+  padding: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--neu-sunken);
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card-img {
+  max-height: 205px;
+  object-fit: contain;
+  transition: var(--transition);
+  filter: drop-shadow(4px 8px 16px rgba(7, 19, 39, 0.15));
+}
+
+.product-card:hover .product-card-img {
+  transform: scale(1.1) translateY(-6px);
+}
+
+.product-card-body {
+  padding: 18px 6px 6px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-card-category {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--surreal-nebula);
+  margin-bottom: 5px;
+}
+
+.product-card-title {
+  font-weight: 800;
+  font-size: 1.08rem;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.7em;
+}
+
+.product-card-title a {
+  color: var(--surreal-navy);
+}
+
+.product-card-title a:hover {
+  color: var(--surreal-nebula);
+}
+
+.product-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  margin-bottom: 14px;
+}
+
+.product-card-rating .stars {
+  color: var(--surreal-gold);
+  filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.4));
+}
+
+.product-card-rating .rating-count {
+  color: var(--text-muted);
+}
+
+.product-card-price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: auto;
+  margin-bottom: 18px;
+}
+
+.sale-price {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--surreal-navy);
+}
+
+.regular-price {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+
+.discount-pill {
+  background: var(--neu-canvas);
+  color: #b45309;
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  box-shadow: 2px 2px 5px #bec9db, -2px -2px 5px #ffffff;
+}
+
+.product-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* -------------------------------------------------------------
+ * 14. Product Gallery & Details Page
+ * ----------------------------------------------------------- */
+.product-gallery-main {
+  background: var(--neu-canvas);
+  border-radius: var(--surreal-contour-card);
+  padding: 34px;
+  text-align: center;
+  box-shadow: var(--neu-sunken);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.product-gallery-main img {
+  max-height: 330px;
+  filter: drop-shadow(8px 16px 28px rgba(7, 19, 39, 0.2));
+  animation: surrealFloat 6s ease-in-out infinite alternate;
+  transition: var(--transition);
+}
+
+.product-gallery-thumbs {
+  display: flex;
+  gap: 14px;
+}
+
+.gallery-thumb {
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  background: var(--neu-canvas);
+  padding: 8px;
+  box-shadow: var(--neu-raised);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-thumb.active {
+  border-color: var(--surreal-nebula);
+  box-shadow: 
+    0 0 16px rgba(99, 102, 241, 0.4),
+    var(--neu-sunken);
+  transform: translateY(-2px);
+}
+
+.gallery-thumb img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-detail-title {
+  font-weight: 900;
+  font-size: 2.15rem;
+  color: var(--surreal-navy);
+  margin-bottom: 14px;
+  letter-spacing: -0.8px;
+}
+
+.stock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #d1fae5;
+  color: #065f46;
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: 2px 2px 6px #c4d0df, -2px -2px 6px #ffffff;
+}
+
+.stock-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* Tactile Neumorphic Quantity Stepper */
+.qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  background: var(--neu-canvas);
+  border-radius: var(--radius-pill);
+  padding: 5px;
+  box-shadow: var(--neu-sunken);
+}
+
+.qty-stepper button,
+.btn-qty-minus,
+.btn-qty-plus {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: var(--neu-canvas);
+  color: var(--surreal-navy);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 6px #becadb, -3px -3px 6px #ffffff;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.qty-stepper button:hover,
+.btn-qty-minus:hover,
+.btn-qty-plus:hover {
+  transform: scale(1.08);
+  color: var(--surreal-nebula);
+}
+
+.qty-stepper button:active,
+.btn-qty-minus:active,
+.btn-qty-plus:active {
+  transform: scale(0.92);
+  box-shadow: inset 2px 2px 4px #b2c0d2, inset -2px -2px 4px #ffffff;
+}
+
+.qty-input {
+  width: 44px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.qty-input:focus {
+  outline: none;
+}
+
+/* Indian Pincode Estimator Box */
+.pincode-checker-box {
+  background: var(--neu-canvas);
+  border-radius: var(--surreal-contour-card);
+  padding: 18px 22px;
+  box-shadow: var(--neu-sunken);
+  margin: 22px 0;
+}
+
+.pincode-input-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* -------------------------------------------------------------
+ * 15. Shopping Cart & Free Shipping Bar
+ * ----------------------------------------------------------- */
+.free-shipping-progress {
+  height: 12px;
+  background: var(--neu-canvas);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--neu-sunken);
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.free-shipping-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #059669, #34d399);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+  transition: width 0.4s ease;
+}
+
+.cart-table th {
+  background: var(--neu-canvas);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.6px;
+  padding: 16px 20px;
+  border: none;
+}
+
+.cart-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(7, 19, 39, 0.05);
+}
+
+/* -------------------------------------------------------------
+ * 16. Checkout & Payment Option Cards
+ * ----------------------------------------------------------- */
+.payment-method-card {
+  background: var(--neu-canvas);
+  border-radius: 20px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  box-shadow: var(--neu-raised);
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.payment-method-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neu-raised-hover);
+}
+
+.payment-method-card.selected,
+.payment-method-card:has(input:checked) {
+  border-color: var(--surreal-nebula);
+  box-shadow: 
+    0 0 20px rgba(99, 102, 241, 0.25),
+    var(--neu-sunken);
+}
+
+/* -------------------------------------------------------------
+ * 17. Order Tracking Stepper (Surreal Cosmic Spheres)
+ * ----------------------------------------------------------- */
+.tracking-pipeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 40px 0 28px;
+}
+
+.tracking-pipeline::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 32px;
+  right: 32px;
+  height: 8px;
+  background: var(--neu-canvas);
+  box-shadow: var(--neu-sunken);
+  border-radius: var(--radius-pill);
+  z-index: 1;
+}
+
+.tracking-step {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  flex: 1;
+}
+
+.tracking-node {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  background: var(--neu-canvas);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: var(--neu-raised);
+  transition: var(--transition);
+}
+
+.tracking-step.current .tracking-node {
+  background: linear-gradient(145deg, #183562, #071327);
+  color: #ffffff;
+  box-shadow: 
+    0 0 25px rgba(99, 102, 241, 0.55),
+    var(--neu-btn-navy);
+  transform: scale(1.18);
+}
+
+.tracking-step.completed .tracking-node {
+  background: linear-gradient(145deg, #10b981, #059669);
+  color: #ffffff;
+  box-shadow: 
+    0 0 22px rgba(16, 185, 129, 0.55),
+    6px 6px 14px rgba(16, 185, 129, 0.35),
+    -4px -4px 10px #ffffff;
+}
+
+.tracking-label {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+
+.tracking-step.current .tracking-label,
+.tracking-step.completed .tracking-label {
+  color: var(--surreal-navy);
+}
+
+/* -------------------------------------------------------------
+ * 18. Footer (Astral Midnight Neumorphic Slab)
+ * ----------------------------------------------------------- */
+.site-footer {
+  background: linear-gradient(150deg, #071327 0%, #0d2140 60%, #161233 100%);
+  color: #e2e8f0;
+  padding: 75px 0 28px;
+  margin-top: 65px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 -14px 34px rgba(7, 19, 39, 0.25),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15);
+}
+
+.footer-brand p {
+  opacity: 0.85;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin-top: 14px;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 11px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--surreal-starlight);
+  padding-left: 6px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 26px;
+  margin-top: 48px;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+/* -------------------------------------------------------------
+ * 19. Mobile Floating Neumorphic Bottom Bar
+ * ----------------------------------------------------------- */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 14px;
+  left: 18px;
+  right: 18px;
+  background: rgba(225, 232, 242, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: var(--radius-pill);
+  padding: 11px 22px;
+  z-index: 1030;
+  box-shadow: 
+    12px 12px 28px #b4c2d5,
+    -10px -10px 24px #ffffff,
+    0 0 20px rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  justify-content: space-around;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.mobile-nav-item i {
+  font-size: 1.35rem;
+  margin-bottom: 2px;
+}
+
+.mobile-nav-item.active,
+.mobile-nav-item:hover {
+  color: var(--surreal-nebula);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991.98px) {
+  .sub-navbar {
+    display: none;
+  }
+  .mobile-bottom-nav {
+    display: flex;
+  }
+  body {
+    padding-bottom: 85px;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+  }
+}

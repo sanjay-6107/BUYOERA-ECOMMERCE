@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="scBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="20" fill="url(#scBg)"/>
+  <!-- Circular ambient glow -->
+  <circle cx="200" cy="150" r="110" fill="#bfdbfe" opacity="0.6"/>
+  <!-- Modern Sneaker Silhouette -->
+  <path d="M70 190 C100 190 120 180 150 170 C180 160 210 130 240 130 C260 130 270 145 270 160 C270 180 290 190 320 190 L320 215 C240 220 120 220 70 215 Z" fill="#ffffff" stroke="#1e3a8a" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Midsole detail -->
+  <path d="M70 205 Q200 210 320 205" stroke="#3b82f6" stroke-width="3" fill="none"/>
+  <!-- Cleanser bottle -->
+  <rect x="230" y="80" width="60" height="110" rx="12" fill="url(#bottleGrad)"/>
+  <rect x="245" y="60" width="30" height="20" rx="4" fill="#f59e0b"/>
+  <path d="M250 60 Q235 45 220 50" stroke="#f59e0b" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Label on bottle -->
+  <rect x="238" y="105" width="44" height="60" rx="4" fill="#ffffff"/>
+  <text x="260" y="125" font-family="sans-serif" font-weight="900" font-size="9" fill="#0f172a" text-anchor="middle">BUYOERA</text>
+  <text x="260" y="140" font-family="sans-serif" font-weight="700" font-size="7" fill="#2563eb" text-anchor="middle">SNEAKER</text>
+  <text x="260" y="152" font-family="sans-serif" font-weight="600" font-size="6" fill="#64748b" text-anchor="middle">PRO FOAM</text>
+  <!-- Sparkles -->
+  <polygon points="120,110 125,125 140,130 125,135 120,150 115,135 100,130 115,125" fill="#f59e0b"/>
+  <polygon points="170,80 173,90 183,93 173,96 170,106 167,96 157,93 167,90" fill="#3b82f6"/>
+</svg>
